@@ -1,0 +1,39 @@
+// Define your variable overrides here
+$enable-shadows: false;
+$enable-gradients: true;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 456px,
+  md: 789px,
+  lg: 999px,
+  xl: 1234px
+);
+$bv-enable-table-stacked: false;
+$primary-green: #009688;
+$primary: $primary-green;
+$orange-9: #E67E2C;
+// Include Bootstrap and BootstrapVue SCSS files
+@import '~bootstrap/scss/bootstrap.scss';
+@import '~bootstrap-vue/src/index.scss';
+
+
+
+.full-height {
+  height: 100vh;
+}
+.form-control {
+  border-color: #009688;
+  border-radius: 2px;
+}
+.card {
+  box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.125), -1px -1px 1px 0px rgba(0, 0, 0, 0.125);
+  border: none;
+}
+.login {
+  a {
+      color: $primary;
+  }
+}
+.header {
+  background-color: $primary;
+}
