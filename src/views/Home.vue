@@ -6,7 +6,9 @@
           <h1>Todo</h1>
         </b-col>
         <b-col class="text-right">
-          <b-button variant="primary" @click="moveToCreate()" class="mb-3">Create</b-button>
+          <b-button variant="primary" @click="moveToCreate()" class="mb-3"
+            >Create</b-button
+          >
         </b-col>
       </b-row>
       <b-row>
@@ -16,10 +18,16 @@
             :text-variant="getColorVariant(todo.status)"
             class="mb-2"
           >
-            <b-card-title class="line-clamp-1">{{todo.title}}</b-card-title>
-            <b-card-text class="line-clamp-3">{{todo.description}}</b-card-text>
-            <input type="checkbox" :checked="todo.status" @input="(e) => updateStatus(e, todo)" />
-            {{todo.status ? "Completed": "Open"}}
+            <b-card-title class="line-clamp-1">{{ todo.title }}</b-card-title>
+            <b-card-text class="line-clamp-3">{{
+              todo.description
+            }}</b-card-text>
+            <input
+              type="checkbox"
+              :checked="todo.status"
+              @input="e => updateStatus(e, todo)"
+            />
+            {{ todo.status ? "Completed" : "Open" }}
             <router-link :to="`/edit/${todo.id}`" class="ml-3">
               <i class="ion ion-md-create mr-1"></i>Edit
             </router-link>

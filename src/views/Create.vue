@@ -3,9 +3,19 @@
     <b-col>
       <b-form @submit.prevent="submitForm">
         <b-form-group id="title" label="Title" label-for="title">
-          <input class="form-control" type="text" id="title" :value="title" @input="updateTitle" />
+          <input
+            class="form-control"
+            type="text"
+            id="title"
+            :value="title"
+            @input="updateTitle"
+          />
         </b-form-group>
-        <b-form-group id="description" label="Description" label-for="description">
+        <b-form-group
+          id="description"
+          label="Description"
+          label-for="description"
+        >
           <textarea
             class="form-control"
             id="description"
@@ -14,11 +24,20 @@
           ></textarea>
         </b-form-group>
         <div v-if="id">
-          <input type="checkbox" id="status" :checked="status" @input="updateStatus" />
-          {{status ? "Completed" : "Open"}}
+          <input
+            type="checkbox"
+            id="status"
+            :checked="status"
+            @input="updateStatus"
+          />
+          {{ status ? "Completed" : "Open" }}
         </div>
-        <b-button type="submit" variant="primary" class="mr-2">{{ id ? "Update" : "Submit"}}</b-button>
-        <b-button type="reset" v-if="!id" variant="danger" @click="resetTodo">Reset</b-button>
+        <b-button type="submit" variant="primary" class="mr-2">{{
+          id ? "Update" : "Submit"
+        }}</b-button>
+        <b-button type="reset" v-if="!id" variant="danger" @click="resetTodo"
+          >Reset</b-button
+        >
       </b-form>
     </b-col>
   </b-row>
@@ -71,5 +90,4 @@ export default class CreateTodo extends Vue {
 }
 </script>
 
-<style lang="sass" scoped>
-</style>
+<style lang="sass" scoped></style>
